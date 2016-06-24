@@ -1,0 +1,14 @@
+package com.pracagain;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class Flight 
+{
+	private WebDriver driver;
+	public Flight() {
+		
+		 this.driver = driver;
+		 PageFactory.initElements(driver, this);
+	}
+}

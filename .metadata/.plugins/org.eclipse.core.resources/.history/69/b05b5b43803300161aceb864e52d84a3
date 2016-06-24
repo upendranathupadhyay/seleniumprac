@@ -1,0 +1,21 @@
+package com.pracpom;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TEST_POM 
+{
+	private WebDriver driver;
+	@Before
+	public void start()
+	{
+		driver = new FirefoxDriver();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	driver.get("https://www.ecwid.com/in/demo");
+    	driver.manage().window().maximize();
+	}
+
+}

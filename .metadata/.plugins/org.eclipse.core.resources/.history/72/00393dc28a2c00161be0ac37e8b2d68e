@@ -1,0 +1,28 @@
+package com.demo;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class WebDemo 
+
+
+{
+	@Test
+	public  void testdemo() {		
+	
+
+	@SuppressWarnings("unused")
+	WebDriver driver=new FirefoxDriver();
+	//PUT an time OUT
+	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	  driver.navigate().to("http://www.calculator.net/");
+	  
+	  driver.findElement(By.xpath(".//*[@id='menu']/div[4]/div[3]/a")).click();
+      
+	}
+	
+}

@@ -1,0 +1,20 @@
+package com.demo;
+
+import java.io.IOException;
+
+import org.junit.Test;
+
+public class TestClass2 {
+
+	@Test
+	public void testRunner() throws IOException
+	{
+		String []param=new String[]{"C:\\Users\\upendrau\\Documents\\AUTOSCRIPT.exe","Authentication Required","aas","dgdd"};
+		Runtime.getRuntime().exec(param);
+		
+		
+		
+	}
+	
+	
+}

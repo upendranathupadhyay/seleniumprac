@@ -1,0 +1,31 @@
+package com.pracagain;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Test_Case 
+{
+	private WebDriver driver;
+	@Before
+	public void start()
+	{
+		 System.setProperty("webdriver.chrome.driver", "D:/Selenium & Other Jars/chromedriver.exe");
+		 driver=new ChromeDriver();
+		//driver=new FirefoxDriver();
+		driver.get("https://www.makemytrip.com/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+	@Test
+	public void click()
+	{
+		Home home=new Home(driver);
+		Flight flight=home.clickFlight();
+		flight.searchFlight();
+	}
+}

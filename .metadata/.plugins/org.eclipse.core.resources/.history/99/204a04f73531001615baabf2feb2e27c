@@ -1,0 +1,20 @@
+package com.day1and2;
+
+import java.io.IOException;
+
+import org.junit.Test;
+
+public class Test5 
+{
+    @Test
+	public void upload() throws IOException
+    {
+    	//Run script
+    	String param[]=new String[]{"C:/Users/upendrau/Desktop/auto/Up.exe","Choose File to Upload"};
+    	Runtime.getRuntime().exec(param);
+    	System.setProperty("webdriver.ie.driver","D:/Selenium & Other Jars/IEDriverServer.exe");
+		WebDriver driver=new InternetExplorerDriver();
+	    driver.get("http://cybintranet:8085/HomePage_Applications/Submit%20a%20photo.aspx");
+    	
+    }
+}

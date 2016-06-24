@@ -1,0 +1,22 @@
+package com.demo;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class WebDemo 
+
+
+{
+	public static void main(String[] args) {
+		
+	
+
+	@SuppressWarnings("unused")
+	WebDriver driver=new FirefoxDriver();
+	//PUT an time OUT
+	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	}
+	
+}

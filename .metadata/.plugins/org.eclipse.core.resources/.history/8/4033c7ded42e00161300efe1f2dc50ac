@@ -1,0 +1,20 @@
+package com.demo;
+
+import java.io.IOException;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Authen 
+{
+	@Test
+   public void test() throws IOException
+   {
+	   String[] test=new String[]{"C:\\Users\\upendrau\\Documents\\Auto\\auto.exe","Authentication Required","upendrau","Password@123"};
+      Runtime.getRuntime().exec(test);
+      WebDriver driver=new FirefoxDriver();
+      driver.get("http://cybintranet.cybage.com/");
+      
+   }
+}
